@@ -35,41 +35,67 @@ DATE (ngày tháng)
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 224826" src="https://github.com/user-attachments/assets/ced82943-0934-462d-8734-0032fbb6cae0" />
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 225047" src="https://github.com/user-attachments/assets/8f41cfc3-3ee6-4bae-93cd-85949caa0473" />
 PHẦN 2: Xây dựng Function
+
 * Các loại hàm có sẵn trong SQL Server
   
 Hàm xử lý chuỗi: LEN, LOWER, UPPER
+
 Hàm số học: ABS, ROUND
+
 Hàm ngày giờ: GETDATE, DATEDIFF
+
 Hàm hệ thống: @@VERSION, SUSER_NAME
+
 *Một số hàm đặc sắc:
+
 SELECT GETDATE() AS NgayHienTai
+
 SELECT LEN(N'Xin chào') AS DoDaiChuoi
+
 SELECT ABS(-100) AS GiaTriTuyetDoi
+
 SELECT @@VERSION AS ThongTinSQL
+
 *Mục đích:
+
 Tái sử dụng logic
+
 Tính toán phức tạp
+
 Làm code gọn hơn
+
   * Các loại:
+  * 
 Scalar Function → trả 1 giá trị
+
 Inline Table Function → trả bảng đơn giản
+
 Multi Table Function → xử lý logic phức tạp
+
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 231037" src="https://github.com/user-attachments/assets/b8c5da54-129e-4b21-a786-2bc31073d572" />
 2.1. SCALAR FUNCTION
+
 Tạo hàm có tên fn_TinhTongTien với tham số truyền vào là @maHoaDon.
+
 Hàm này thực hiện tính toán tổng giá trị của một hóa đơn cụ thể bằng cách lấy Gia từ bảng SanPham nhân với SoLuong từ bảng ChiTietHoaDon, sau đó dùng hàm SUM() để cộng dồn lại.
 Giá trị trả về là kiểu FLOAT.
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 230214" src="https://github.com/user-attachments/assets/35b96370-a163-46b8-bc08-45363e91c5da" />
 ọi hàm
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 230434" src="https://github.com/user-attachments/assets/8d4d7fdb-201b-433b-a927-bfd544952365" />
 2.2 INLINE TABLE FUNCTION
+
     Tạo hàm fn_SanPhamGiaCao nhận tham số đầu vào là @gia (kiểu FLOAT).
+    
 Thay vì trả về 1 con số đơn lẻ, hàm này trả về một tập hợp dữ liệu (bảng) gồm tất cả các cột từ bảng SanPham thỏa mãn điều kiện giá lớn hơn giá trị tham số truyền vào.
+
 Bên dưới hàm, lệnh SELECT * FROM fn_SanPhamGiaCao(1) được dùng để khai thác hàm: Lọc ra các sản phẩm có giá lớn hơn 1.
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 231356" src="https://github.com/user-attachments/assets/6c8d77fe-166c-42c3-acb6-69454069eb13" />
 Tạo hàm fn_ThongKeBanHang không cần tham số đầu vào.
+
 Khác với hàm Inline, hàm này khai báo một biến bảng tạm @bang với cấu trúc cột rõ ràng (tenSanPham, tongSoLuong) ngay tại phần RETURNS.
+
 Sử dụng khối lệnh BEGIN...END để thực hiện tính toán: Dùng lệnh INSERT INTO @bang kết hợp với truy vấn SELECT...GROUP BY để thống kê tổng số lượng đã bán của từng sản phẩm thông qua việc JOIN giữa bảng ChiTietHoaDon và SanPham.
+
 Cuối cùng dùng lệnh RETURN để trả về nội dung đã nạp vào biến bảng @bang.
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 231548" src="https://github.com/user-attachments/assets/0a8bbe6b-0b94-4ba0-bc12-f01288d13c56" />
 Phần 3 : Xây dựng Store Procedure
