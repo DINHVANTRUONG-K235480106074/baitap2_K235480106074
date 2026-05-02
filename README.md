@@ -219,6 +219,7 @@ Nếu soLuongTon < 50 thì hiển thị "Sắp hết hàng", ngược lại là 
 <img width="1919" height="1079" alt="Screenshot 2026-05-02 222713" src="https://github.com/user-attachments/assets/c255ea48-4ab8-405f-9739-7835813c7fe9" />
 Sử dụng các thiết lập hệ thống để kiểm tra thời gian thực thi (Execution Time) và thời gian biên dịch (Compile Time) của đoạn mã sử dụng Cursor.
 <img width="1919" height="1079" alt="Screenshot 2026-05-02 223153" src="https://github.com/user-attachments/assets/b1cdd9e9-ebc3-4671-a94b-3f1ede2377cc" />
+CURSOR giúp xử lý từng sinh viên theo thứ tự và áp dụng logic phụ thuộc vào bản ghi trước, nhưng có nhược điểm là tốc độ chậm hơn so với các câu lệnh SQL thông thường. Tuy nhiên, trong những bài toán có logic phức tạp và phụ thuộc giữa các bản ghi, CURSOR lại phù hợp và dễ triển khai hơn so với SQL thuần.
 Sử dụng Cursor để duyệt danh sách sản phẩm và thực hiện cập nhật giá bán dựa trên các mức giá khác nhau.
 
 Khai báo con trỏ cur_TangGia để lấy mã sản phẩm và giá hiện tại.
