@@ -84,7 +84,7 @@ Giá trị trả về là kiểu FLOAT.
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 230434" src="https://github.com/user-attachments/assets/8d4d7fdb-201b-433b-a927-bfd544952365" />
 2.2 INLINE TABLE FUNCTION
 
-    Tạo hàm fn_SanPhamGiaCao nhận tham số đầu vào là @gia (kiểu FLOAT).
+Tạo hàm fn_SanPhamGiaCao nhận tham số đầu vào là @gia (kiểu FLOAT).
     
 Thay vì trả về 1 con số đơn lẻ, hàm này trả về một tập hợp dữ liệu (bảng) gồm tất cả các cột từ bảng SanPham thỏa mãn điều kiện giá lớn hơn giá trị tham số truyền vào.
 
