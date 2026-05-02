@@ -31,8 +31,11 @@ FLOAT (số thực)
 NVARCHAR (chuỗi Unicode)
 DATE (ngày tháng)
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 224648" src="https://github.com/user-attachments/assets/afba8297-698a-442c-bc1b-6287a5ab3fb3" />
+
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 224749" src="https://github.com/user-attachments/assets/a52ce57d-7315-4906-9e74-fb66ad75db2b" />
+
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 224826" src="https://github.com/user-attachments/assets/ced82943-0934-462d-8734-0032fbb6cae0" />
+
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 225047" src="https://github.com/user-attachments/assets/8f41cfc3-3ee6-4bae-93cd-85949caa0473" />
 PHẦN 2: Xây dựng Function
 
@@ -219,8 +222,6 @@ Nếu soLuongTon < 50 thì hiển thị "Sắp hết hàng", ngược lại là 
 <img width="1919" height="1079" alt="Screenshot 2026-05-02 222713" src="https://github.com/user-attachments/assets/c255ea48-4ab8-405f-9739-7835813c7fe9" />
 Sử dụng các thiết lập hệ thống để kiểm tra thời gian thực thi (Execution Time) và thời gian biên dịch (Compile Time) của đoạn mã sử dụng Cursor.
 <img width="1919" height="1079" alt="Screenshot 2026-05-02 223153" src="https://github.com/user-attachments/assets/b1cdd9e9-ebc3-4671-a94b-3f1ede2377cc" />
-CURSOR giúp xử lý từng sinh viên theo thứ tự và áp dụng logic phụ thuộc vào bản ghi trước, nhưng có nhược điểm là tốc độ chậm hơn so với các câu lệnh SQL thông thường. Tuy nhiên, trong những bài toán có logic phức tạp và phụ thuộc giữa các bản ghi, CURSOR lại phù hợp và dễ triển khai hơn so với SQL thuần.
 Sử dụng Cursor để duyệt danh sách sản phẩm và thực hiện cập nhật giá bán dựa trên các mức giá khác nhau.
-
-Khai báo con trỏ cur_TangGia để lấy mã sản phẩm và giá hiện tại.
 <img width="1919" height="1079" alt="Screenshot 2026-05-02 223703" src="https://github.com/user-attachments/assets/dd480e28-3c39-459e-8c29-b3c192aad644" />
+CURSOR giúp xử lý từng sinh viên theo thứ tự và áp dụng logic phụ thuộc vào bản ghi trước, nhưng có nhược điểm là tốc độ chậm hơn so với các câu lệnh SQL thông thường. Tuy nhiên, trong những bài toán có logic phức tạp và phụ thuộc giữa các bản ghi, CURSOR lại phù hợp và dễ triển khai hơn so với SQL thuần.
