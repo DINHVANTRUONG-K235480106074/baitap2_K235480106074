@@ -36,6 +36,7 @@ DATE (ngày tháng)
 <img width="1919" height="1079" alt="Screenshot 2026-05-01 225047" src="https://github.com/user-attachments/assets/8f41cfc3-3ee6-4bae-93cd-85949caa0473" />
 PHẦN 2: Xây dựng Function
 * Các loại hàm có sẵn trong SQL Server
+  
 Hàm xử lý chuỗi: LEN, LOWER, UPPER
 Hàm số học: ABS, ROUND
 Hàm ngày giờ: GETDATE, DATEDIFF
